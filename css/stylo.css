@@ -1,0 +1,196 @@
+
+@font-face {
+    font-family: 'narutoFont'; /* Nombre que quieras asignar a la fuente */
+    src: url('../font/njnaruto.ttf') format('truetype'); /* Ruta al archivo de fuente */
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(#2a4f19, #7e4533);
+    display: flex;
+    align-items: center;
+}
+
+.contenedor {
+    width: 100vw;
+    height: 280px;
+    margin: 0 auto;
+    
+    position: relative;
+
+    background-image: url(../img/forest1.jpg);/*linear-gradient(#90ebff, white);*/
+    transition: background-color 1s linear;
+    overflow: hidden;
+}
+
+.mensaje {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/*
+AQUI VAN LOS ESTILOS DE LOS NIVELES
+*/
+
+.mediodia {
+    background-image: url(../img/mediodia.jpg);
+}
+
+.tarde {
+    background-image: url(../img/tarde.jpg);
+}
+
+.noche {
+    background-image: url(../img/noche.jpg);
+}
+
+.medianoche {
+    background-image: url(../img/medianoche.jpg);
+}
+
+.nightmare {
+    background-image: url(../img/nightmare.jpg);
+}
+
+.Naruto {
+    width: 84px;
+    height: 84px;
+
+    position: absolute;
+    bottom: 22px;
+    left: 42px;
+    z-index: 2;
+
+    background: url(../img/naruto1.png) repeat-x 0px 0px;
+    background-size: 336px 84px;
+    background-position-x: 0px;
+    display: none;
+
+}
+
+.Naruto-gif {
+    position: absolute;
+    bottom: 10px; /* Misma posición que la imagen de Naruto corriendo */
+    left: 42px; /* Misma posición que la imagen de Naruto corriendo */
+    z-index: 2; /* Igual que la imagen de Naruto corriendo */
+}
+
+.Naruto-corriendo {
+    animation: animarNaruto 0.25s steps(2) infinite;
+}
+.Naruto-estrellado {
+    background-position-x: -252px;
+}
+
+.suelo {
+    width: 200%;
+    height: 42px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: url(../img/suelo.png) repeat-x 0px 0px;
+    background-size: 50% 42px;
+
+}
+
+.roca{
+    width: 98px;
+    height: 66px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(../img/roca1.png) no-repeat;
+}
+.roca2{
+    width: 98px;
+    height: 66px;
+
+    background: url(../img/roca2.png) no-repeat;
+}
+
+.nube{
+    width: 92px;
+    height: 45px;
+
+    position: absolute;
+    z-index: 0;
+    display: block;
+
+    background: url(../img/nube.png) no-repeat;
+    background-size: 92px 45px;
+}
+
+
+.degradado {
+    background: linear-gradient(to right, #FCD000, #E0330A);
+    -webkit-background-clip: text; /* Para navegadores WebKit (Chrome, Safari) */
+    background-clip: text;
+    color: transparent; /* Oculta el color del texto original */
+}
+
+
+.score{
+    width: 100px;
+    height: 50px;
+
+    position: absolute;
+    top: 5px;
+    right: 50px;
+    z-index: 10;
+
+
+    font-family: 'narutoFont';
+    font-size: 50px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.mensaje {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 9999; /* Valor alto para que se sobreponga a las otras imágenes */
+}
+
+.mensaje img {
+    display: block;
+    margin: 0 auto;
+}
+
+.game-over {
+    display: none;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 9999; /* Valor alto para que se sobreponga a las otras imágenes */
+}
+
+.game-over img {
+    display: block;
+    margin: 0 auto;
+}
+
+@keyframes animarNaruto{
+    from{
+        background-position-x: -84px;
+    }
+    to{
+        background-position-x: -252px;
+    }
+}
