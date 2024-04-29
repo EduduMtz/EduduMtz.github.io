@@ -166,6 +166,16 @@ AQUI VAN LOS ESTILOS DE LOS NIVELES
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 9999; /* Valor alto para que se sobreponga a las otras imágenes */
+    animation: parpadeo 2s infinite alternate; /* Nombre de la animación, duración, número de repeticiones y dirección */
+}
+
+@keyframes parpadeo {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .mensaje img {
